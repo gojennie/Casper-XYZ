@@ -29,7 +29,8 @@
         {{!-- The footer at the very bottom of the screen --}}
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section>Powered by <a href="https://www.vultr.com/?ref=6879746">Vultr Cloud 🚀</a></section>
+                {{!-- Altered Vultr affiliate link into original copyright--}}
+                <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
                 <nav class="site-footer-nav">
                     <a href="{{@site.url}}/about/">About</a>
                 </nav>
