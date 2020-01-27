@@ -16,26 +16,21 @@
             </div>
         </div>
     </div>
+    {{!-- Removed all GitHub, Mastodon, Linkedin, Instagram and Shaarli links and SVG icons --}}
     <div class="site-nav-right">
-        <div class="social-links">
         {{#if @site.secondary_navigation}}
             {{navigation type="secondary"}}
         {{else}}
             <div class="social-links">
-             {{#if @site.twitter}}
-                <a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-            {{/if}}
-                <a rel="me" class="social-link social-link-ms" href="https://mstdn.io/@angristan" target="_blank" rel="noopener">{{> "icons/mastodon"}}</a>
-                <a class="social-link social-link-gh" href="https://github.com/Angristan" target="_blank" rel="noopener">{{> "icons/github"}}</a>
-                <a class="social-link social-link-lk" href="https://www.linkedin.com/in/stanislas-lange/" target="_blank" rel="noopener">{{> "icons/linkedin"}}</a>
-                <a class="social-link social-link-is" href="https://www.instagram.com/angristan/" target="_blank" rel="noopener">{{> "icons/instagram"}}</a>
-                <a class="social-link social-link-sh" href="https://links.angristan.xyz" target="_blank" rel="noopener">{{> "icons/shaarli"}}</a>
-            {{#if @site.facebook}}
-                <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-            {{/if}}
+                {{#if @site.facebook}}
+                    <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                {{/if}}
+                {{#if @site.twitter}}
+                    <a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                {{/if}}
             </div>
             {{#unless @labs.members}}
-                <a class="rss-button" href="{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+                <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
             {{/unless}}
         {{/if}}
 
